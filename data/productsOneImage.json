@@ -1,0 +1,26 @@
+[
+   {
+      "id": 1,
+      "name": "Fuerza Natural",
+      "description": "lorem ipsum dolor amet sit",
+      "image": "1676754309919_products.jpg"
+   },
+   {
+      "id": 2,
+      "name": "Amor Amarillo",
+      "description": "lorem ipsum dolor amet sit",
+      "image": "1676754323890_products.jpg"
+   },
+   {
+      "id": 3,
+      "name": "Ahí vamos",
+      "description": "lorem ipsum dolor amet sit",
+      "image": "1676754343716_products.jpg"
+   },
+   {
+      "id": 4,
+      "name": "Siempre es hoy",
+      "description": "lorem ipsum dolor amet sit",
+      "image": "1676754356394_products.jpg"
+   }
+]
