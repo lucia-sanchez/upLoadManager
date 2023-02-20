@@ -51,15 +51,15 @@
     <div class="d-flex justify-content-between mt-5" >
       <h2>Productos con una imagen principal y varias imagenes secundarias</h2>
       
-      <a href="/products/add-multiple-images" class="btn btn-outline-dark">Agregar Imagen</a>
+      <a href="/products/add-main-image" class="btn btn-outline-dark">Agregar Imagen</a>
 
     </div>
   
     <section class="row mb-5" >
     
-      <% productsMultipleImages.forEach(product => { %>
+      <% productsMainImage.forEach(product => { %>
         <div class= "col-12 col-md-4 col-lg-3">
-          <%- include('./partials/cardMultipleImages',{
+          <%- include('./partials/cardMainImage',{
             //paso como segundo parametro den un obj las propiedades del producto propagado
             ...product
           }) %>

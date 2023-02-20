@@ -20,6 +20,9 @@ router
 
   .get('/add-main-image', addMainImage)
   //En la ruta que viene con los datos del form agrego el nombre del metodo + single(si es una sola imagen)+ el name del input
-  .post('/add-main-image', storeMainImage)
+  .post('/add-main-image', upLoadImage.fields([{name: 'mainImage'},{name:'images'}]), storeMainImage)
   .get('/detail-main-image/:id', detailMainImage)
-module.exports = router;
+
+
+
+   module.exports = router;

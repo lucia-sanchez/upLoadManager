@@ -1,0 +1,15 @@
+[
+   {
+      "id": 1,
+      "name": "Baby shark",
+      "description": "",
+      "mainImage": "1676932167404_products.jpeg",
+      "images": [
+         "1676932167408_products.jpg",
+         "1676932167412_products.png",
+         "1676932167435_products.png",
+         "1676932167440_products.png",
+         "1676932167443_products.png"
+      ]
+   }
+]

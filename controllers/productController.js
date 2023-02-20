@@ -60,10 +60,31 @@ module.exports ={
         return res.render('addMainImage')
     },
     storeMainImage : (req,res) =>{
-        return req.send(req.body)
+        const products = readJSON('productsMainImage.json');
+        const newProduct ={
+            id : products.length ? products[products.length -1].id +1 : 1,
+            name : req.body.name,
+            description : req.body.description,
+            //pregunto si existe la imagen, antes de requerirlo
+            //la subida de imagenes multiples viene por files 
+            mainImage : req.files && req.files.mainImage ? req.files.mainImage[0].filename : null,
+            images : req.files? req.files.images.map(file=>file.filename) :[]
+        };
+        //pusheo el nuevo producto al array products
+        products.push(newProduct);
+        //Lo guardo, sobreescribiendo el archivo json y envio los datos de products
+        writeJSON('productsMainImage.json',products)
+        //redirijo al home
+        return res.redirect('/')
     },
+
     detailMainImage : (req,res)=>{
-        return res.render('detailMainImage')
+    const products = readJSON('productsMainImage.json');
+    const product = products.find(product => product.id === +req.params.id)
+    res.render('detailMainImage',{
+        ...product
+    })
+    
     }
         
 }
